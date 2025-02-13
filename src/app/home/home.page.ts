@@ -13,6 +13,8 @@ export class HomePage {
   n1=0;
   n2=0;
   res=0;
-  
 
+  somar(){
+    this.res=this.n1+this.n2
+  }
 }

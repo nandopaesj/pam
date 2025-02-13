@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculadora
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Primeiro número" labelPlacement="floating" type="number" placeholder="Enter text" [(ngModel)]="n1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Segundo número" labelPlacement="floating" type="number" placeholder="Enter text" [(ngModel)]="n2"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button id="open-loading"expand="block" shape="round" (click)="somar()">Somar</ion-button>
+  <ion-loading trigger="open-loading" message="Calculando" [duration]="300" spinner="circles"></ion-loading>
+  <ion-label>
+    <br>
+    {{res}}
+  </ion-label>
 </ion-content>
